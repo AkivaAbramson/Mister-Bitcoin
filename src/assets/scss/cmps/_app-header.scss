@@ -1,0 +1,18 @@
+.app-header{
+    background: rgb(99, 99, 2);
+    color: white;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    padding-block: 20px;
+    // margin-block-end: 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    
+    .link, .logo {
+        cursor: pointer;
+    }
+    .link:hover {
+        scale: 1.05;
+    }
+}

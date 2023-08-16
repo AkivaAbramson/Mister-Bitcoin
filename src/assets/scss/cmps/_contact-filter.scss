@@ -1,0 +1,9 @@
+.contact-filter {
+    display: flex;
+    flex-wrap: wrap;
+    margin-block-start: 60px;
+    > section {
+        display: flex;
+        flex-direction: column;
+    }
+}
