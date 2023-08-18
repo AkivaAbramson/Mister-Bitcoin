@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { contactService } from '../services/contactService'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { TransferFund } from '../cmps/TransferFund'
+import { MovesList } from '../cmps/MovesList'
 
 export function ContactDetails() {
     const [contact, setContact] = useState(null)
@@ -19,7 +21,7 @@ export function ContactDetails() {
             console.log('error:', error)
         }
     }
-    
+
     function onBack() {
         navigate('/contact')
     }
@@ -27,18 +29,21 @@ export function ContactDetails() {
     if (!contact) return <div>Loading...</div>
     return (
         <section className='contact-details'>
-            <section>
-                <h3>Name: {contact.name}</h3>
-            </section>
-            <section>
-                <h3>Email: {contact.email}</h3>
-            </section>
-            <section>
-                <h3>Phone: {contact.phone}</h3>
-            </section>
-            <img src={`https://robohash.org/${contact.name}.png?set=set5`} />
-            <button className='btn' onClick={onBack}>Back</button>
-            <Link className='clean btn-edit' to={`/contact/edit/${params.id}`} >Edit Contact</Link>
+            <div className='details-info'>
+                <img className='details-img' src={`https://robohash.org/${contact.name}.png?set=set5`} />
+                <section className='details-data'>
+                    <h3>Name: <span className='gray'>{contact.name}</span></h3>
+                    <h3>Email: <span className='gray'>{contact.email}</span></h3>
+                    <h3>Phone: <span className='gray'>{contact.phone}</span></h3>
+                </section>
+
+            </div>
+            <TransferFund contact={contact} />
+            <MovesList contact={contact} />
+            <div className='actions'>
+                <button className='btn' onClick={onBack}>Back</button>
+                <Link className='clean btn-edit btn' to={`/contact/edit/${params.id}`} >Edit Contact</Link>
+            </div>
         </section>
     )
 }

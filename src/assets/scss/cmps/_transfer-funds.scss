@@ -1,0 +1,21 @@
+.transfer-fund{
+    background-color: lightblue;
+    border: 1px solid darkblue;
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+    // display: flex;
+    // justify-content: center;
+    > *{
+        padding-block: 20px;
+    }
+
+    .transfer-btn{
+        font-size: 10px;
+        margin-inline-start: 10px;
+        height: 30px;
+        &:hover{
+            background-color: aliceblue;
+        }
+    }
+}

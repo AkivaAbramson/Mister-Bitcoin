@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './assets/scss/global.scss'
 import { ContactIndex } from './pages/ContactIndex'
 import { HomePage } from './pages/HomePage'
+import { SignUp } from './pages/SignUp'
 import { AppHeader } from './cmps/AppHeader'
 import { Stats } from './pages/Stats'
 import { ContactDetails } from './pages/ContactDetails'
@@ -31,6 +32,7 @@ function App() {
                             </RouteGuard>
                         }/>
                         <Route path='/' element={<HomePage/>}/>
+                        <Route path='/signup' element={<SignUp/>}/>
                         <Route path='/contact' element={<ContactIndex/>}/>
                         <Route path='/about' element={<Stats/>}/>
                         <Route path='contact/edit/:id?' element={<ContactEdit />} />

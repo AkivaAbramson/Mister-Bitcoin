@@ -1,0 +1,32 @@
+.signup-page{
+    margin-block-start: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    > *{
+        margin-block-end: 20px;
+    }
+
+    .signup-img{
+        // aspect-ratio: 1/1;
+        width: 400px;
+        margin-block-end: 40px;
+        border-radius: 50px;
+        // display: flex;
+        // justify-self: center;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        > *{
+            margin-block-end: 10px;
+        }
+        .signup-btn{
+            color: rgb(3, 108, 73);
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+    }
+}

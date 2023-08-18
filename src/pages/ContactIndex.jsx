@@ -3,6 +3,8 @@ import { contactService } from '../services/contactService'
 import { ContactList } from '../cmps/ContactList'
 import { ContactFilter } from '../cmps/ContactFilter'
 import { ContactDetails } from './ContactDetails'
+import { useNavigate} from 'react-router-dom'
+import { userService } from '../services/userService'
 
 export function ContactIndex() {
 
@@ -11,12 +13,17 @@ export function ContactIndex() {
     const [filterBy, setFilterBy] = useState({
         name:''
     })
+    const navigate = useNavigate()
 
     useEffect(() => {
         loadContacts()
     }, [filterBy])
 
     async function loadContacts() {
+        const currUser = await userService.getLoggedinUser()
+        if(!currUser){
+            navigate('/signup')
+        }
         const contacts = await contactService.query(filterBy)
         setContacts(contacts)
     }

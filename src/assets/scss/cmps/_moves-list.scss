@@ -1,0 +1,15 @@
+.moves-list{
+    background-color: lightblue;
+    border: 1px solid darkblue;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
+    .moves-title{
+        text-align: center;
+        padding-block-end: 10px;
+        
+    }
+    .move-info{
+        padding: 10px;
+    }
+}

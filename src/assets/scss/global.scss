@@ -17,6 +17,7 @@
 @import "pages/contact-index";
 @import "pages/contact-details";
 @import "pages/home-page";
+@import "pages/signup-page";
 @import "pages/stats";
 @import "pages/contact-edit";
 
@@ -25,6 +26,8 @@
 @import "cmps/contact-list";
 @import "cmps/contact-filter";
 @import "cmps/app-header";
+@import "cmps/transfer-funds";
+@import "cmps/moves-list";
 
 .main-app {
     // background-color: lightgray;

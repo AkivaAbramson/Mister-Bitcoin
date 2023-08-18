@@ -1,3 +1,29 @@
 .home img {
     width: 50px;
 }
+
+.recent-moves{
+    padding: 20px;
+    background-color: lightblue;
+    border: 1px solid blue;
+    border-radius: 20px;
+    .recent-title{
+        text-align: center;
+        margin-block-end: 20px;
+    }
+    .last-moves{
+        margin-block-end: 30px;
+        padding-bottom: 10px; 
+        > *{
+            margin-block-end: 10px;
+        }
+
+        .gray{
+            color: gray;
+        }
+    }
+    .divider{
+        border-bottom: 1px solid gray;
+    }
+}
+

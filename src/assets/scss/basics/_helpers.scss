@@ -63,9 +63,9 @@
 }
 
 // Media helpers
-.square-ratio {
-    @include aspect-ratio(1, 1);
-}
+// .square-ratio {
+//     @include aspect-ratio(1, 1);
+// }
 
 .wide-ratio {
     @include aspect-ratio(16, 9);
