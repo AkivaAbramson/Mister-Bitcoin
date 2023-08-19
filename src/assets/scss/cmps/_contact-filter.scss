@@ -1,9 +1,35 @@
 .contact-filter {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin-block-start: 60px;
+    // margin-block-start: 60px;
     > section {
         display: flex;
         flex-direction: column;
+    }
+    .btn-edit{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        background-color: lightgrey;
+        margin-block-start: 10px;
+        height: 40px;
+        width: 150px;
+        text-align: center;
+        padding: 15px;
+        border-radius: 20px;
+        font-family:cursive;
+        &:hover{
+            background-color: rgb(184, 183, 183);
+        }
+
+    }
+    .form-label{
+        font-family:cursive;
+    }
+    .form-input{
+        width: 300px;
+        height: 30px;
     }
 }

@@ -24,19 +24,19 @@ export function ContactFilter(props) {
     const { name } = filterBy
     return (
         <section className='contact-filter'>
-        <label htmlFor="name" className="form-label">
-          Search Contact
-        </label>
-        <input
-          onChange={handleChange}
-          id="name"
-          type="text"
-          name="name"
-          className="form-input"
-          value={name}
-          autoComplete="off"
-        />
-        <Link className='clean btn-edit' to={`/contact/edit`} >Add a Contact</Link>
+          <label htmlFor="name" className="form-label">
+            Search Contact
+          </label>
+          <input
+            onChange={handleChange}
+            id="name"
+            type="text"
+            name="name"
+            className="form-input"
+            value={name}
+            autoComplete="off"
+          />
+          <Link  className='clean btn-edit' to={`/contact/edit`} >+ Add Contact</Link>
       </section>
     )
 }

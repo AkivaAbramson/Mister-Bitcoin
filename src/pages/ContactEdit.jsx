@@ -61,17 +61,22 @@ export function ContactEdit(props) {
     return (
         <section className='contact-edit'>
             <h1>{contact._id ? 'Edit' : 'Add'} Contact</h1>
-            <form onSubmit={onSaveContact} >
-                <label htmlFor="name">Name</label>
+            <form className='edit-form' onSubmit={onSaveContact} >
+                <div className='input-wrapper'>
+                <label htmlFor="name">Name: </label>
                 <input onChange={handleChange} value={name} type="text" name="name" id="name" />
-
-                <label htmlFor="phone">Phone</label>
+                </div>
+                <div className='input-wrapper'>
+                <label htmlFor="phone">Phone:</label>
                 <input onChange={handleChange} value={phone} type="text" name="phone" id="phone" />
-                
-                <label htmlFor="email">Email</label>
-                <input onChange={handleChange} value={email} type="text" name="email" id="email" />
+                </div>
 
-                <button>Save</button>
+                <div className='input-wrapper'>
+                <label htmlFor="email">Email: </label>
+                <input onChange={handleChange} value={email} type="text" name="email" id="email" />
+                </div>
+
+                <button className='edit-save'>Save</button>
             </form>
         </section>
     )

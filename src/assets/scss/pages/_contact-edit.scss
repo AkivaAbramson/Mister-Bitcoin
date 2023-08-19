@@ -1,3 +1,30 @@
 .contact-edit{
     margin-block-start: 100px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    .edit-form{
+        display: flex;
+        flex-direction: column;
+        .input-wrapper{
+            > *{
+                margin-inline-start: 10px;
+            }
+        }
+        input[type="text"]{
+            width: 200px;
+            margin-block-start: 10px;
+        }
+        .edit-save{
+            width: 70px;
+            height: 30px;
+            margin-block-start: 20px;
+            margin-inline-start: 120px;
+            background-color: bisque;
+            border: none;
+            border-radius: 20px;
+
+        }
+    }
 }
