@@ -53,7 +53,7 @@ export function HomePage() {
             </div>
             <div className="flex items-center gap-2">
                 <img src={dollarsImg} />
-                <p>USD: ${user.coins * 26182.80}</p>
+                <p>USD: {user.coins ? `$${(user.coins * 26182.80).toLocaleString()}` : 'Loading...'}</p>
             </div>
             {/* <div className='stats-wrapper gap-2'>
                 <Stats />
