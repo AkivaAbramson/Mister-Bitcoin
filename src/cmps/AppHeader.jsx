@@ -23,12 +23,11 @@ export function AppHeader() {
 
   return (
     <header className="app-header flex justify-between items-center">
-      <h1 className="logo">
-        Mister<span className="fw-bold clr-teal">Bitcoin</span>
-      </h1>
-      {/* <NavLink className="logo">
-        Mister<span className="fw-bold clr-teal">Bitcoin</span>
-      </NavLink> */}
+      <NavLink to="/" className="logo clean">
+        <h1>
+          Mister<span className="fw-bold clr-teal">Bitcoin</span>
+        </h1>
+      </NavLink>
       <div className="hamburger-btn" onClick={() => setSidebarOpen(!sidebarOpen)}>
         ☰
       </div>

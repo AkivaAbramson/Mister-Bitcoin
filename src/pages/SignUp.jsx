@@ -59,7 +59,7 @@ export function SignUp() {
     return (
         <section className="signup-page">
             <img className='signup-img' src={signupImage}/>
-            <h1>Please enter your name:</h1>
+            <h1 className='greeting-title'>Please enter your name:</h1>
             <form className='form' onSubmit={onSaveUser} >
                 {/* <label htmlFor="name">Username</label> */}
                 <input onChange={handleChange} value={name} type="text" name="name" id="name" />

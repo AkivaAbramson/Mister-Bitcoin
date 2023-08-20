@@ -1,12 +1,14 @@
 .contact-details {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    margin-inline-start: 40px;
-    margin-block-start: 60px;
+    align-items: center;
+    margin-inline: 40px;
+    margin-block-start: 20px;
+    
     .details-info{
         display: flex;
-        width: 100%;
+        justify-content: center;
+        width: 70%;
         .details-data{
             margin-inline-start: 40px;
             margin-block-start: 50px;
@@ -43,8 +45,17 @@
         }
     }
     .actions{
-        width: 100%;
+        width: 70%;
         display: flex;
         justify-content: space-between;
+    }
+    @media screen and (max-width: 768px){
+        .details-info {
+            flex-direction: column;
+            align-items: center;
+            .details-data {
+                margin-block-start: 20px; 
+            }
+        }
     }
 }

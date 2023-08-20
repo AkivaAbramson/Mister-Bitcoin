@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import { userService } from '../services/userService'
 import { bitcoinService } from '../services/bitcoinService'
 import { useNavigate } from 'react-router-dom'
+import dollarsImg from '../assets/imgs/dollars.jpg';
+import { Stats } from './Stats';
 
 export function HomePage() {
 
@@ -34,7 +36,7 @@ export function HomePage() {
     if (!user) return <div>Loading...</div>
 
     return (
-        <section className="home p-4 flex flex-col gap-1">
+        <section className="home p-2 flex flex-col gap-1">
             <div className="flex items-center gap-2">
                 <img src='https://res.cloudinary.com/dtaiyvzq5/image/upload/v1692114168/n08tvl9liglyf7f3u3hu.png' alt="" />
                 <p>
@@ -49,6 +51,13 @@ export function HomePage() {
                 <img src='https://res.cloudinary.com/dtaiyvzq5/image/upload/v1692114221/dfyxot4ofoop9ekwvnzz.png' alt="" />
                 <p>BTC: {bitcoinRate}</p>
             </div>
+            <div className="flex items-center gap-2">
+                <img src={dollarsImg} />
+                <p>USD: ${user.coins * 26182.80}</p>
+            </div>
+            {/* <div className='stats-wrapper gap-2'>
+                <Stats />
+            </div> */}
             <div className='recent-moves'>
                 {user.moves[0] && <h1 className='recent-title'>Your recent transfers</h1>}
                 {user.moves[0] && <div className='last-moves divider'>
